@@ -22,8 +22,6 @@ inquirer.prompt([
             // const repoNames = res.data.map(function(repo) {
             //   return repo.name;
             // });
-            console.log(res.data.login)
-
             const gitUserName = res.data.login;
             const gitProfileImg = res.data.avatar_url;
             const userLoca = res.data.location;
@@ -34,6 +32,17 @@ inquirer.prompt([
             const followerNum = res.data.followers;
             const starsNum = res.data.following;
             const followingNum = res.data.following;
+
+            console.log(gitUserName);
+            console.log(gitProfileImg);
+            console.log("https://www.google.com/maps/search/?api=1&query="+userLoca);
+            console.log(userGitProfile);
+            console.log("https://"+userBlog);
+            console.log(userBio);
+            console.log(repoNum);
+            console.log(followerNum);
+            console.log(starsNum);
+            console.log(followingNum);
 
             var resText = JSON.stringify(res.data, null, 2);
      
