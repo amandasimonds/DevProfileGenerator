@@ -36,11 +36,12 @@
 
            main {
            background-color: #E9EDEE;
-           height: auto;
+           height: ;
            border:1px solid black;
            padding-top: 30px;
-           width:;
+           width:800px;
            margin:0 auto;
+           text-align: center;
            }
 
            h1, h2, h3, h4, h5, h6 {
@@ -131,6 +132,12 @@
              /* background-color: ${colors[data.color].headerBackground};
              color: ${colors[data.color].headerColor}; */
              margin: 20px;
+             text-align:center;
+           }
+
+           .box {
+               width:300px;
+               display: inline-block;
            }
            
            .col {
@@ -159,25 +166,49 @@
             
             <main>
                 
-                <div class="photo-header card">
+                <div class="photo-header card photo-header h1 phot-header h2">
 
                     <img class="photo-header img" src="https://avatars1.githubusercontent.com/u/51679378?v=4" alt="">
-                    <div class="row">
-                        <h1>Hi! My name is ${data.name}</h1>
+                    <div style="display: inline-block;">
+                            <h3>Hi!</h3><br> 
+                            <h4>My name is ${data.name}</h4>
+                            <br>
+                            <div class="links-nav nav-link">
+                                <a href="${data.userLoca}">Location</a>
+                                <a href="${data.url}">GitHub</a>
+                                <a href="${data.url}">Blog</a>
+                                
+                            </div>
+                        </div>
+                </div>
+
+                <h4>Bio: ${data.bio}</h4>
+        
+
+                    <div class="card box" >
+                        <h5>Public Repositories:</h5>
+                        <br><h6>${data.repos}</h6>
                     </div>
-                </div>
-                
-                <div class="col">
-
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-
-                <div class="col">
-
-                    <div class="card"></div>
-                    <div class="card"></div>
                     
+                    <div class="card box">
+                    <h5>Followers:</h5>
+                    <br><h6>${data.followers}</h6>
+                </div>
+                <br>
+               
+
+                    <div class="card box">
+                        <h5>GitHub Stars:</h5>
+                        <br><h6>${data.stars}</h6>
+                    </div>
+                    
+                    <div class="card box">
+                        <h5>Following:</h5>
+                        <br><h6>${data.following}</h6>
+                    </div>
+                    
+                
+
                 </div>
             </main>
             
