@@ -66,9 +66,7 @@ function promptUser(){
               pdf.create(html).toFile('./portfolio.pdf', function(err, res) {
                 if (err) return console.log(err);
                 console.log(res);
-              })
-
-              
+              })           
             
             })
 
